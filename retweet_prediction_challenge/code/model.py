@@ -32,6 +32,8 @@ class CamembertRegressor():
             metric_list = ["mse"]
         clf_metrics = evaluate.combine(metric_list)
         predictions, labels = eval_preds
+        print('Eval predictions', predictions[:10])
+        print('Eval gt', labels[:10])
         return clf_metrics.compute(predictions=predictions, references=labels)
 
     def train(self, dataset):
@@ -45,4 +47,5 @@ class CamembertRegressor():
             callbacks=[TensorBoardCallback()]
         )
         trainer.train()
+        print(trainer.predict(tokenized_datasets["train"]))
         print(trainer.predict(tokenized_datasets["test"]))

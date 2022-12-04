@@ -12,4 +12,4 @@ def get_custom_dataset(csv_path=Path.home()/'retweet-prediction-challenge/retwee
     df['retweets_count'] = df['retweets_count'].astype(float)
     dataset = Dataset.from_pandas(df)
     dataset = dataset.rename_column("retweets_count", "labels")
-    return dataset.train_test_split(test_size=0.1)
+    return dataset.train_test_split(test_size=test_size, seed=42)
