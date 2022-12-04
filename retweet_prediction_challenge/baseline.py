@@ -1,12 +1,12 @@
 import csv
 import numpy as np
 import pandas as pd
-from sklearn.ensemble import GradientBoostingRegressor
+from nltk.corpus import stopwords
 from sklearn.dummy import DummyRegressor
+from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import mean_absolute_error
-from verstack.stratified_continuous_split import scsplit # pip install verstack
-from nltk.corpus import stopwords 
+from verstack.stratified_continuous_split import scsplit  # pip install verstack
 
 # Load the training data
 train_data = pd.read_csv("train.csv")
@@ -29,7 +29,7 @@ X_train = vectorizer.fit_transform(X_train['text'])
 X_test = vectorizer.transform(X_test['text'])
 
 # Now we can train our model. Here we chose a Gradient Boosting Regressor and we set our loss function 
-reg = GradientBoostingRegressor()#reg = RandomForestRegressor() #
+reg = GradientBoostingRegressor() #reg = RandomForestRegressor() #
 #reg = LinearRegression()
 
 # We fit our model using the training data

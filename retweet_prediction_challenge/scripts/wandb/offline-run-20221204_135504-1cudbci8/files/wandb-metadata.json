@@ -1,0 +1,24 @@
+{
+    "os": "Linux-5.4.0-91-generic-x86_64-with-glibc2.17",
+    "python": "3.8.15",
+    "heartbeatAt": "2022-12-04T10:55:05.861486",
+    "startedAt": "2022-12-04T10:55:04.544467",
+    "docker": null,
+    "gpu": "NVIDIA RTX A4000",
+    "gpu_count": 2,
+    "cpu_count": 40,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "camembert_fine_tuning.py",
+    "codePath": "retweet_prediction_challenge/scripts/camembert_fine_tuning.py",
+    "git": {
+        "remote": "https://github.com/VladislavTominin/retweet-prediction-challenge",
+        "commit": "a5d00253b9789fe22aaff8893c4b7ceeda10d321"
+    },
+    "email": "v.tominin@ira-labs.com",
+    "root": "/homes/vladtom/retweet-prediction-challenge",
+    "host": "hub",
+    "username": "vladtom",
+    "executable": "/homes/vladtom/miniconda3/envs/hf/bin/python"
+}
